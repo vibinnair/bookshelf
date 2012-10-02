@@ -1,0 +1,15 @@
+<% title 'Login' %>
+<%= form_for @admin_session, :url => admin_session_path do |f| %>
+	<%= f.error_messages %>
+	<p>
+		<%= f.label :login %>
+		<%= f.text_field :login %>
+	</p>	
+
+	<p>
+		<%= f.label :pasword %>
+		<%= f.text_field :password %>
+	</p>	
+
+	<%= f.submit "Login" %>
+<% end %>

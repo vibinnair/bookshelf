@@ -1,0 +1,11 @@
+<% title '~ My Books ~' %>
+<% @books.each do |book| %>
+	<h2><%= link_to book.title, book_path(book) %></h2>
+	<p><%= book.thoughts %></p>
+<% end %>
+
+<%= will_paginate @books %>
+
+<p>
+	Admin actions : <%= link_to "New Book", new_book_path %>
+</p>

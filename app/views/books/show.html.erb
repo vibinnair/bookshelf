@@ -1,0 +1,27 @@
+<% title @book.title %>
+<h2> <%= link_to @book.title, book_path(@book) %> </h2>
+<p> <%= @book.thoughts %> </p>
+
+<% if @comments %>
+	<h3> Comments </h3>
+	<% @comments.each do |comment| %>
+		<p><strong> <%= comment.author %></strong> : <%= comment.text %>
+	<% end %>
+	<%= will_paginate @comments %>
+<% end %>		 
+
+<h3>Post Your Comments</h3>
+<%= form_for  [@book, Comment.new] do |form| %>
+	<%= form.label :author, 'Author' %>
+	<p><%= form.text_field :author %></p>
+	<p><%= form.label 'Comment' %></p>
+	<p><%= form.text_area :text %></p>
+	<%= form.submit 'Save' %>
+<% end %>	
+
+<p>
+	Admin Actions :
+	<%= link_to 'Edit', edit_book_path(@book) %> | 
+	<%= link_to 'Delete', book_path(@book), :method => :delete, :confirm => "Are you sure?" %> |
+	<%= link_to "Back", books_path %>
+</p>	
