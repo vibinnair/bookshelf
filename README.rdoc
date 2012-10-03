@@ -4,12 +4,22 @@ This is a simple book review web application that i have developed using Rails 3
 Steps to install
 ------------------
 1. Clone the repository 
-git clone https://github.com/vibinnair/bookshelf.git
+    >git clone https://github.com/vibinnair/bookshelf.git
 
-2. cd bookshelf
+2. Goto to the folder 
+    >cd bookshelf
 
-3. bundle install
+3. Install all the dependencies.
+    >bundle install
 
-4. rails server.
+4. Create the databases and tables.
+    >rake db:migrate
 
-5. Open the browser and browse to http://localhost:3000/books
+5. Add few dummy books (Optional Step)
+    >rake db:populate   (In each call 5 dummy books are added. You can change this by modifying the loop count in bookshelf/lib/tasks/populate.rake)    
+
+6. Run the rack server.
+    >rails server.
+
+7. Open the browser and browse to
+     http://localhost:3000/books
