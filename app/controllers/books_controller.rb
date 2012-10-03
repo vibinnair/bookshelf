@@ -1,4 +1,6 @@
 class BooksController < ApplicationController
+	before_filter :login_required, :except => [:index, :show]
+
 	def index
 		@books =  Book.paginate :page => params[:page], :per_page => 8
 	end
@@ -43,5 +45,13 @@ class BooksController < ApplicationController
 		book.destroy
 		flash[:notice] = "#{book.title} deleted"
 		redirect_to books_path
+	end
+
+	private
+	def login_required
+		unless current_admin
+			flash[:error] = 'Only logged in admins can access this page.'
+			redirect_to books_path
+		end	
 	end
 end
