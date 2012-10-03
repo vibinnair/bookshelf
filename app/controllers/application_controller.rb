@@ -12,6 +12,6 @@ class ApplicationController < ActionController::Base
 
   def current_admin
   	return @current_admin if defined?(@current_admin)
-  	@current_admin = current_admin_session && current_admin_session.user
+  	@current_admin = current_admin_session && current_admin_session.admin
   end
 end
