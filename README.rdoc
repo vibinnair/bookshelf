@@ -18,8 +18,11 @@ Steps to install
 5. Add few dummy books (Optional Step)
     >rake db:populate   (In each call 5 dummy books are added. You can change this by modifying the loop count in bookshelf/lib/tasks/populate.rake)    
 
-6. Run the rack server.
+6. Create an Admin (Optional Step)
+    >rake db:seed   (You can change the admin by modifying the Admin.create! parameters in bookshelf/db/seeds.rb)    
+
+7. Run the rack server.
     >rails server.
 
-7. Open the browser and browse to
+8. Open the browser and browse to
      http://localhost:3000/books
