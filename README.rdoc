@@ -26,3 +26,12 @@ Steps
 
 8. Open the browser and browse to
      http://localhost:3000/books
+
+
+
+Few links that proved helpful during issues
+--------------------------------------------
+1. Authlogic related issue : current_user_session.user is undefined.
+		http://stackoverflow.com/questions/2242871/following-authlogic-tutorial-but-undefined-method-email-for-usersession     
+		http://techoctave.com/c7/posts/37-authlogic-and-rails-3-0-solution
+		http://stackoverflow.com/questions/1553412/the-authlogic-record-method-what-does-this-do
