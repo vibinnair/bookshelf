@@ -19,9 +19,11 @@
 	<%= form.submit 'Save' %>
 <% end %>	
 
+<% if current_admin %>
 <p>
 	Admin Actions :
 	<%= link_to 'Edit', edit_book_path(@book) %> | 
 	<%= link_to 'Delete', book_path(@book), :method => :delete, :confirm => "Are you sure?" %> |
 	<%= link_to "Back", books_path %>
-</p>	
+</p>
+<% end %>	
