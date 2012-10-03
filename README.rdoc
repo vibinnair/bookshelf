@@ -1,2 +1,15 @@
 Hi,
 This is a simple book review web application that i have developed using Rails 3. This application is build as part of my reading and practising the tutorial avaiable at http://net.tutsplus.com/tutorials/ruby/zero-to-sixty-creating-and-deploying-a-rails-app-in-under-an-hour/. The tutorial uses Rails 2 while the one available here is on Rails 3.
+
+Steps to install
+------------------
+1. Clone the repository 
+git clone https://github.com/vibinnair/bookshelf.git
+
+2. cd bookshelf
+
+3. bundle install
+
+4. rails server.
+
+5. Open the browser and browse to http://localhost:3000/books
